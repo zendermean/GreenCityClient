@@ -17,7 +17,7 @@ Though there are two GitHub projects ([GreenCity](https://github.com/ita-social-
 **IMPORTANT:**
 1. If you want to implement (fix) the feature (bug) which includes communication with a server part of the project you should change the `back-end` link at `environments/environment.ts`
 `backendLink: 'http://localhost:8080/'` -> `'https://greencity-lv448.herokuapp.com/'`.
-**Don't forget to change the link back to 'http://localhost:8080/' before you commit**.
+**Don't forget to change the link back to `http://localhost:8080/` before you commit**.
 2. Make sure that your code doesn't have any warnings/errors according to tslint (configuration file is present at the project's root). Be aware that some code editors don't highlight warnings/errors in code correctly.
 3. Make sure that there are no redundant comments in your code.
 
@@ -49,7 +49,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Travis CI: how to configure an automatic deploy Angular 8 application to github-pages (fork)
+## Travis CI: how to configure an automatic deploy of Angular 8 application to github-pages (fork)
 
 1. Sign-up on Travis CI with your GitHub account.
 2. To be able to build your project with Travis CI you should have .travis.yml file with build configurations in your project (there is one in GreenCityClient repository).

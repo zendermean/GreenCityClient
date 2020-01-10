@@ -22,8 +22,9 @@ export class RestoreFormComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.restoreDto = new RestoreDto();
     this.setNullAllMessage();
-    this.sub = this.route.params.subscribe(params => {
-      this.restoreDto.token = params.token;
+    this.sub = this.route.queryParamMap.subscribe(params => {
+      this.restoreDto.token = params.get('token');
+      this.restoreDto.userId = Number.parseInt(params.get('user_id'), 10);
     });
   }
 

@@ -32,7 +32,7 @@ export const router: Routes = [
       { path: '', component: SignInComponent },
       { path: 'sign-up', component: SignUpComponent },
       { path: 'submit-email', component: SubmitEmailComponent },
-      { path: 'restore/:token', component: RestoreFormComponent }
+      { path: 'restore', component: RestoreFormComponent }
     ]
   },
   {

@@ -1,23 +1,23 @@
-import { SignUpComponent } from './component/user/auth/sign-up/sign-up.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { HomePageGuardService } from './service/route-guards/home-page-guard.service';
+import { HomepageComponent } from './component/general/homepage/homepage/homepage.component';
 import { AuthComponent } from './component/user/auth/auth.component';
 import { SignInComponent } from './component/user/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './component/user/auth/sign-up/sign-up.component';
 import { SubmitEmailComponent } from './component/user/auth/submit-email/submit-email.component';
+import { RestoreFormComponent } from './component/user/restore-form/restore-form.component';
 import { MapComponent } from './component/user/map/map.component';
+import { FilterComponent } from './component/filter/filter.component';
+import { UserHabitPageComponent } from './component/user/habit/user-habit-page/user-habit-page.component';
+import { AuthPageGuardService } from './service/route-guards/auth-page-guard.service';
 import { AdminComponent } from './component/admin/admin.component';
 import { PlacesComponent } from './component/admin/places/places.component';
 import { UsersComponent } from './component/admin/users/users.component';
-import { FilterComponent } from './component/filter/filter.component';
-import { RestoreFormComponent } from './component/user/restore-form/restore-form.component';
 import { FeedbacksComponent } from './component/admin/feedbacks/feedbacks.component';
-import { UserHabitPageComponent } from './component/user/habit/user-habit-page/user-habit-page.component';
-import { Routes } from '@angular/router';
-import { HomepageComponent } from './component/general/homepage/homepage/homepage.component';
-import { AuthPageGuardService } from './service/route-guards/auth-page-guard.service';
-import { HomePageGuardService } from './service/route-guards/home-page-guard.service';
-import { AppComponent } from './app.component';
-import { EcoNewsComponent } from './component/general/eco-news/eco-news.component'
 
-export const router: Routes = [
+const routes: Routes = [
   {
     path: '',
     component: AppComponent,
@@ -62,6 +62,12 @@ export const router: Routes = [
   },
   {
     path: 'news',
-    component: EcoNewsComponent
+    loadChildren: './component/eco-news/eco-news.module#EcoNewsModule'
   }
 ];
+
+@NgModule({
+ imports: [RouterModule.forRoot(routes)],
+ exports: [RouterModule]
+})
+export class AppRoutingModule { }

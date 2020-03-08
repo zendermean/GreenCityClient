@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { router } from './router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './component/user/map/map.component';
@@ -130,6 +128,7 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { InputcolorDirective } from './directives/inputcolor.directive';
+import {AppRoutingModule} from './app-routing.module';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -215,7 +214,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     NgxPageScrollModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(router),
+    AppRoutingModule,
     HttpClientModule,
     SocialLoginModule,
     FormsModule,

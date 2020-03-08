@@ -13,7 +13,7 @@ import {
   HttpClient,
   HttpClientModule
 } from '@angular/common/http';
-import { ProposeCafeComponent } from './component/user/propose-cafe/propose-cafe.component';
+import { ProposeCafeComponent } from './component/core/propose-cafe/propose-cafe.component';
 import { AdminModule } from './component/admin/admin.module';
 import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -55,9 +55,8 @@ import { ButtonComponent } from './component/user/habit/button-component/button.
 import { HabitTrackersComponent } from './component/user/habit/habit-trackers/habit-trackers.component';
 import { HabitItemComponent } from './component/user/habit/habit-trackers/habit-tracker/habit-estimation/habit-item/habit-item.component';
 import { HabitTrackerComponent } from './component/user/habit/habit-trackers/habit-tracker/habit-tracker.component';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { UserHabitPageComponent } from './component/user/habit/user-habit-page/user-habit-page.component';
-import { LowerNavBarComponent } from './component/user/lower-nav-bar/lower-nav-bar.component';
+import { LowerNavBarComponent } from './component/core/lower-nav-bar/lower-nav-bar.component';
 import { HabitEstimationComponent } from './component/user/habit/habit-trackers/habit-tracker/habit-estimation/habit-estimation.component';
 import { AdviceComponent } from './component/user/habit/habit-trackers/habit-tracker/advice/advice.component';
 import { GoalItemComponent } from './component/user/user-goals/goal-item/goal-item.component';
@@ -102,12 +101,10 @@ import { HomepageComponent } from './component/general/homepage/homepage/homepag
 import { StatRowComponent } from './component/general/homepage/stat-row/stat-row.component';
 import { StatRowsComponent } from './component/general/homepage/stat-rows/stat-rows.component';
 import { SubscribeComponent } from './component/general/homepage/subscribe/subscribe.component';
-import { FooterComponent } from './component/general/homepage/footer/footer.component';
 import { EcoEventsComponent } from './component/general/homepage/eco-events/eco-events.component';
 import { TipsListComponent } from './component/general/homepage/useful-tips/tips-list/tips-list.component';
 import { TipsCardComponent } from './component/general/homepage/useful-tips/tips-card/tips-card.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { InputcolorDirective } from './directives/inputcolor.directive';
 import {CoreModule} from './component/core/core.module';
 
@@ -135,13 +132,11 @@ import {CoreModule} from './component/core/core.module';
     UserLogComponent,
     ButtonComponent,
     UserHabitPageComponent,
-    LowerNavBarComponent,
     GoalItemComponent,
     GoalListComponent,
     AddGoalButtonComponent,
     GoalContainerComponent,
     UserSidebarComponent,
-    LowerNavBarComponent,
     ShowFirstNPipe,
     AlphabeticalPipePipe,
     AddNewHabitModalComponent,
@@ -176,7 +171,6 @@ import {CoreModule} from './component/core/core.module';
     StatRowComponent,
     StatRowsComponent,
     SubscribeComponent,
-    FooterComponent,
     EcoEventsComponent,
     TipsListComponent,
     TipsCardComponent,
@@ -186,7 +180,6 @@ import {CoreModule} from './component/core/core.module';
     CoreModule,
     BrowserModule,
     SwiperModule,
-    NgxPageScrollModule,
     BrowserAnimationsModule,
     HttpClientModule,
     SocialLoginModule,
@@ -228,10 +221,3 @@ import {CoreModule} from './component/core/core.module';
 export class AppModule {
 }
 
-export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(
-    httpClient,
-    './assets/i18n/',
-    '.json'
-  );
-}

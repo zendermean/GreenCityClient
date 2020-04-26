@@ -48,7 +48,6 @@ export class CreateEcoNewsService {
   public setTranslationByLang(language: string, translations: NewsModel): void {
     this.translations[language].text = translations.text;
     this.translations[language].title = translations.title;
-    console.log(this.files[0].file);
   }
 
   public getFormData(): FormGroup {
@@ -83,10 +82,7 @@ export class CreateEcoNewsService {
     formData.append('image', this.files[0].file, this.files[0].file.name);
     formData.append('addEcoNewsDtoRequest', JSON.stringify(body));
 
-    console.log(JSON.stringify(body), this.files[0].file, this.files[0].file.name);
-
     this.httpOptions.headers.set('Authorization', `Bearer ${this.accessToken}`);
- 
     return this.http.post<NewsResponseDTO>(`${this.url}/econews`, formData, this.httpOptions);
   }
 }

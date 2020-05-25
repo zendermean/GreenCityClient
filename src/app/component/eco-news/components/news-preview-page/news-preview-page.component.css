@@ -1,4 +1,4 @@
-.container {
+.wrapper {
   margin: 0 auto;
 }
 
@@ -131,4 +131,15 @@
 
 .news-text-content {
   width: 750px;
+}
+
+@media screen and (max-width: 768px) {
+  .news-text-container,
+  .news-image-img {
+    display: block;
+  }
+
+  .news-links-images {
+    display: flex;
+  }
 }

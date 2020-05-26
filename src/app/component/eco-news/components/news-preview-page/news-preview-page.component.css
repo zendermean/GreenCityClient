@@ -74,6 +74,10 @@
   border-radius: 25px;
 }
 
+.news-content {
+  max-width: 944px;
+}
+
 .news-title-container {
   margin: 0 98px;
   display: flex;
@@ -139,6 +143,10 @@
     height: 100%;
   }
 
+  .news-content {
+    width: 960px;
+  }
+
   .news-image-img {
     width: 960px;
     height: 406px;
@@ -158,6 +166,12 @@
 
   .news-links-images {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .news-content {
+    width: 740px;
   }
 
   .news-image-img {
@@ -174,6 +188,10 @@
   .news-image-img {
     width: 548px;
     height: 322px;
+  }
+
+  .news-content {
+    width: 548px;
   }
 
   .news-text-content {

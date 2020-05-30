@@ -52,6 +52,9 @@ import { ProfileDashboardComponent } from "./profile/profile-dashboard/profile-d
 import { OneHabitComponent } from "./profile/profile-dashboard/one-habit/one-habit.component";
 import { ProfileCardsComponent } from "./profile/profile-cards/profile-cards.component";
 import { AchievementsFriendsComponent } from "./profile/achievements-friends/achievements-friends.component";
+import { EcoPlacesComponent } from './profile/eco-places/eco-places.component';
+import { ShoppingListComponent } from './profile/shopping-list/shopping-list.component';
+import { CalendarComponent } from './profile/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +105,10 @@ import { AchievementsFriendsComponent } from "./profile/achievements-friends/ach
     ProfileHeaderComponent,
     ProfileProgressComponent,
     ProfileComponent,
-    AchievementsFriendsComponent
+    AchievementsFriendsComponent,
+    EcoPlacesComponent,
+    ShoppingListComponent,
+    CalendarComponent
   ],
   imports: [
     CommonModule,

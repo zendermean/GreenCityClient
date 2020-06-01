@@ -1,6 +1,6 @@
 <div>
   <div class="container">
-    <h1 class="main-header">Eco news</h1>
+    <h1 class="main-header">{{ "homepage.eco-news.title" | translate }}</h1>
   </div>
 </div>
 <div>
@@ -9,7 +9,7 @@
     <a [routerLink]="['create-news']"
        *ngIf="isLoggedIn">
       <div id="create-button" class="secondary-global-button">
-          <span id="create-button-text">Create news</span>
+          <span id="create-button-text">{{ "homepage.eco-news.create" | translate }}</span>
       </div>
     </a>
   </div>
